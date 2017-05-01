@@ -3,6 +3,7 @@
 namespace Bmartus\LaravelShippo;
 
 use Illuminate\Support\ServiceProvider;
+use Shippo\Shippo;
 
 class LaravelShippoServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,7 @@ class LaravelShippoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Shippo::setApiKey(env('SHIPPO_API_KEY'));
+        Shippo::setApiKey(env('SHIPPO_API_KEY'));
     }
 
     /**
